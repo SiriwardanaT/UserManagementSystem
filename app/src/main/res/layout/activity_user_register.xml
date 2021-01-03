@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/back_reg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C0C0C"
+    tools:context=".UserRegister">
+
+    <TextView
+        android:id="@+id/Reg_tv_signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/sign"
+        android:textColor="#FAF6F6"
+        android:textSize="45sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reg_tv_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="@string/up"
+        android:textColor="#F57C00"
+        android:textSize="45sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Reg_tv_signUp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/reg_username"
+        android:layout_width="314dp"
+        android:drawableLeft="@drawable/ic_user"
+        android:layout_height="37dp"
+        android:autofillHints=""
+        android:background="#F6F5F5"
+        android:ems="10"
+        android:hint="@string/username12"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/reg_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Reg_tv_signUp"
+        app:layout_constraintVertical_bias="0.679" />
+
+    <EditText
+        android:id="@+id/reg_email"
+        android:layout_width="314dp"
+        android:layout_height="37dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:layout_marginBottom="32dp"
+        android:background="#F6F5F5"
+        android:ems="10"
+        android:hint="@string/example_gmail_com"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/reg_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/reg_phone"
+        android:layout_width="314dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="32dp"
+        android:background="#F6F5F5"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_phone"
+        android:hint="@string/_10_digit"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/reg_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/reg_pass"
+        android:layout_width="314dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="268dp"
+        android:background="#FDFCFC"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_pass"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/reg_tv_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/usernames"
+        android:textColor="#FBF8F8"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/reg_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Reg_tv_signUp"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/reg_tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textColor="#FBF8F8"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/reg_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_username"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/reg_tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        android:textColor="#FBF8F8"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/reg_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_email"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/reg_tv_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/password"
+        android:textColor="#FBF8F8"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/reg_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_phone"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/reg_button"
+        android:layout_width="315dp"
+        android:layout_height="40sp"
+        android:layout_marginTop="44dp"
+        android:background="#FFFFFF"
+
+        android:text="@string/sign_up"
+        app:backgroundTint="#FFA000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_pass" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
