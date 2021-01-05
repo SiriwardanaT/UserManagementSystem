@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                                 customer.setUserName(username.getText().toString().trim());
                                 customer.setEmail(Email.getText().toString().trim());
                                 customer.setPassword(pass.getText().toString().trim());
-                                ref.push().setValue(customer).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                ref.setValue(customer).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
@@ -104,7 +104,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Login.class);
+                startActivity(intent);
+            }
+        });
 
 
 
