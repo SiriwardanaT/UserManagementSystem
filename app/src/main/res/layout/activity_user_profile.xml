@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E8E0E0"
+    android:background="#0C0C0C"
     tools:context=".UserProfile">
 
     <TextView
@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="68dp"
         android:text="@string/userprofile"
+        android:textColor="#FFFFFF"
         android:textSize="36sp"
+        app:drawableTint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/ULable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,11 +25,13 @@
         android:id="@+id/ULable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="124dp"
+        android:drawableStart="@drawable/ic_user"
         android:text="@string/name"
+        android:textColor="#F4F3F3"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.249"
+        app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,12 +39,38 @@
         android:id="@+id/UEmails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_email"
+        android:shadowColor="#F4EFEF"
         android:text="@string/emails"
+        android:textColor="#FFFDFD"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.249"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ULable"
-        app:layout_constraintVertical_bias="0.128" />
+        app:layout_constraintVertical_bias="0.042" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="347dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="8dp"
+        android:text="update"
+        app:backgroundTint="#F57C00"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="347dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="292dp"
+        android:text="go to shop"
+        app:backgroundTint="#F57C00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

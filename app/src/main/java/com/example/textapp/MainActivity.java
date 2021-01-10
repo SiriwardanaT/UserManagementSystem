@@ -24,11 +24,8 @@ public class MainActivity extends AppCompatActivity {
      EditText username;
      EditText Email;
      EditText pass;
-
      Button save;
      Button update;
-     Button delete;
-     Button view;
      Customer customer;
      DatabaseReference ref;
      FirebaseAuth auth;
@@ -45,12 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
         save = (Button) findViewById(R.id.button9);
         update = (Button) findViewById(R.id.button10);
-        delete = (Button) findViewById(R.id.button11);
-        view = (Button) findViewById(R.id.button12);
+
         auth = FirebaseAuth.getInstance();
 
         customer = new Customer();
-
         save.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -73,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     pass.setError("Please Enter Email");
                     pass.requestFocus();
                     return;
-                } else {
+                } else{
 
                     auth.createUserWithEmailAndPassword(Email.getText().toString(), pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
@@ -88,14 +83,14 @@ public class MainActivity extends AppCompatActivity {
                                 ref.setValue(customer).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
-                                        if (task.isSuccessful()) {
+                                        if(task.isSuccessful()) {
                                             Toast.makeText(MainActivity.this, "User register successfully!", Toast.LENGTH_SHORT).show();
-                                        } else {
+                                        }else {
                                             Toast.makeText(MainActivity.this, "Invalid datasaved!", Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                 });
-                            } else {
+                            }else {
                                 Toast.makeText(MainActivity.this, "something went wrong !", Toast.LENGTH_SHORT).show();
                             }
                         }

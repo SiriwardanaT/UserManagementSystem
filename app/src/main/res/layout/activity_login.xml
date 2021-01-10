@@ -4,43 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#100F0F"
     android:orientation="vertical"
-    tools:context=".Login" >
+    tools:context=".Login">
 
     <TextView
         android:id="@+id/Login_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="36dp"
         android:layout_marginTop="12dp"
-        android:text="Login" />
+        android:background="#151414"
+        android:gravity="center"
+        android:text="Login"
+        android:textColor="#F1EFEF"
+        android:textSize="36dp" />
 
     <EditText
         android:id="@+id/log_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="username"
+        android:layout_height="50dp"
         android:layout_marginTop="55dp"
-         />
+        android:background="#FBF8F8"
+        android:ems="10"
+        android:hint="username"
+        android:inputType="textPersonName"
+        android:textColor="#F6F0F0" />
 
     <EditText
         android:id="@+id/log_pass"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFFDFD"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
-        android:layout_marginTop="12dp"
-         />
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
+        android:background="#F57C00"
         android:backgroundTint="@color/cardview_dark_background"
-        android:text="Button" />
+        android:text="login"
+        app:backgroundTint="#F57C00" />
 </LinearLayout>

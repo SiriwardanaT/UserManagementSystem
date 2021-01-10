@@ -18,7 +18,9 @@ import com.google.firebase.database.ValueEventListener;
 public class UserProfile extends AppCompatActivity {
     TextView u;
     TextView p;
+    //1.firebase auth
     FirebaseAuth auth;
+    //2.firebase referece
     DatabaseReference ref;
 
     @Override
@@ -29,8 +31,9 @@ public class UserProfile extends AppCompatActivity {
         p =(TextView)findViewById(R.id.UEmails);
         auth= FirebaseAuth.getInstance();
         String id = auth.getCurrentUser().getUid();
+        //3
         ref = FirebaseDatabase.getInstance().getReference("Customer");
-
+        //4
         ref.child(id).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

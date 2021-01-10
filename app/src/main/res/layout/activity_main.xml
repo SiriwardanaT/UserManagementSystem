@@ -57,18 +57,5 @@
             android:text="@string/login"
             app:backgroundTint="#6C6767" />
 
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/delete"
-            app:backgroundTint="#737070" />
-
-        <Button
-            android:id="@+id/button12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/view"
-            app:backgroundTint="#605B5B" />
     </LinearLayout>
 </LinearLayout>

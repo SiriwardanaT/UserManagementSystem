@@ -22,16 +22,15 @@ public class Login extends AppCompatActivity {
     Button l_btn;
     FirebaseAuth auth;
     DatabaseReference ref;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         l_email = (EditText)findViewById(R.id.log_name);
         l_pass = (EditText)findViewById(R.id.log_pass);
         l_btn  = (Button)findViewById(R.id.login_btn);
         auth = FirebaseAuth.getInstance();
-
         login();
 
     }
